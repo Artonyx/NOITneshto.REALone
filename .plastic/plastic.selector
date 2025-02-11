@@ -1,0 +1,4 @@
+repository "NOITneshto@NOITorganizaciq@cloud"
+  path "/"
+    br "/main"
+    co "/main"
