@@ -10,8 +10,8 @@ public class SpaceshipShooting : MonoBehaviour
     public float fireRate = 0.5f;
     public float rocketFireRate = 1.5f;
 
-    private float _nextFireTime = 0f;
-    private float _nextRocketFireTime = 0f;
+    private float _nextFireTime;
+    private float _nextRocketFireTime;
 
     void Update()
     {
