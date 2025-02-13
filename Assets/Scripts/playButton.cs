@@ -4,6 +4,6 @@ public class Main_menu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync("levelPicker");
+        SceneManager.LoadSceneAsync(1);
     }
 }
