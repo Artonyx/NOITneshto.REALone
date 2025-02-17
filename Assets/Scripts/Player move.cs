@@ -4,7 +4,6 @@ public class SpaceshipController : MonoBehaviour
 {
     public float thrustPower = 70f;
     public float rotationSpeed = 100f;
-    public float dragFactor = 0.99f; // Simulates friction in space
 
     private Rigidbody2D rb;
 
@@ -16,11 +15,6 @@ public class SpaceshipController : MonoBehaviour
     void Update()
     {
         HandleMovement();
-    }
-
-    void FixedUpdate()
-    {
-        ApplyDrag();
     }
 
     void HandleMovement()
@@ -43,8 +37,5 @@ public class SpaceshipController : MonoBehaviour
         }
     }
 
-    void ApplyDrag()
-    {
-        rb.linearVelocity *= dragFactor;
-    }
+
 }
