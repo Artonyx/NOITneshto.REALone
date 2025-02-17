@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SpaceshipController : MonoBehaviour
 {
-    public float thrustPower = 10f;
+    public float thrustPower = 70f;
     public float rotationSpeed = 100f;
     public float dragFactor = 0.99f; // Simulates friction in space
 
@@ -27,19 +27,19 @@ public class SpaceshipController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            rb.AddForce(Vector2.up * thrustPower);
+            rb.AddForce(Vector2.up * thrustPower * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.S))
         {
-            rb.AddForce(Vector2.down * thrustPower);
+            rb.AddForce(Vector2.down * thrustPower * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            rb.AddForce(Vector2.right * thrustPower);
+            rb.AddForce(Vector2.right * thrustPower * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            rb.AddForce(Vector2.left * thrustPower);
+            rb.AddForce(Vector2.left * thrustPower * Time.deltaTime);
         }
     }
 

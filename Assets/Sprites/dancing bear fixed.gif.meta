@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dancing bear fixed_0: 7986365501334789423
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
