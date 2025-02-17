@@ -13,14 +13,28 @@ public class SpaceshipShooting : MonoBehaviour
     private float _nextFireTime;
     private float _nextRocketFireTime;
 
+    void Start()
+    {
+        
+        if (firePoint == null)
+        {
+            firePoint = transform.Find("FirePoint");
+            if (firePoint == null)
+            {
+                Debug.LogError("FirePoint is not assigned and was not found as a child of the spaceship!");
+            }
+        }
+    }
+
     void Update()
     {
+        if (firePoint == null) return; 
         if (Input.GetKey(KeyCode.Mouse0) && Time.time >= _nextFireTime)
         {
             ShootProjectile();
             _nextFireTime = Time.time + fireRate;
         }
-        
+
         if (Input.GetKey(KeyCode.Mouse1) && Time.time >= _nextRocketFireTime)
         {
             ShootRocket();
@@ -30,6 +44,8 @@ public class SpaceshipShooting : MonoBehaviour
 
     void ShootProjectile()
     {
+        if (firePoint == null) return;
+
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         if (rb != null)
@@ -40,11 +56,13 @@ public class SpaceshipShooting : MonoBehaviour
 
     void ShootRocket()
     {
+        if (firePoint == null) return;
+
         GameObject rocket = Instantiate(rocketPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = rocket.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            rb.linearVelocity = firePoint.up * rocketSpeed;
+            rb.linearVelocity = firePoint.up * rocketSpeed; 
         }
     }
 }
