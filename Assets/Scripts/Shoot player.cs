@@ -12,11 +12,12 @@ public class SpaceshipShooting : MonoBehaviour
     public float laserDamage = 10;
     public float rocketDamage = 30;
 
-    private float _nextProjectileFireTime = 0f;
-    private float _nextRocketFireTime = 0f;
+    private float _nextFireTime;
+    private float _nextRocketFireTime;
 
     void Start()
     {
+        
         if (firePoint == null)
         {
             firePoint = transform.Find("FirePoint");
@@ -29,20 +30,17 @@ public class SpaceshipShooting : MonoBehaviour
 
     void Update()
     {
-        if (firePoint == null) return;
-
-       
-        if (Input.GetKey(KeyCode.Mouse0) && Time.time >= _nextProjectileFireTime)
+        if (firePoint == null) return; 
+        if (Input.GetKey(KeyCode.Mouse0) && Time.time >= _nextFireTime)
         {
             ShootProjectile();
-            _nextProjectileFireTime = Time.time + fireRate; 
+            _nextFireTime = Time.time + fireRate;
         }
 
-        
         if (Input.GetKey(KeyCode.Mouse1) && Time.time >= _nextRocketFireTime)
         {
             ShootRocket();
-            _nextRocketFireTime = Time.time + rocketFireRate; 
+            _nextRocketFireTime = Time.time + rocketFireRate;
         }
     }
 
@@ -54,7 +52,7 @@ public class SpaceshipShooting : MonoBehaviour
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            rb.linearVelocity = firePoint.up * projectileSpeed; 
+            rb.linearVelocity = firePoint.up * projectileSpeed;
         }
     }
 

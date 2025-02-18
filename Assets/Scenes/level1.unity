@@ -1003,12 +1003,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 789745725}
-  rocketPrefab: {fileID: 0}
+  rocketPrefab: {fileID: 1941697283}
   firePoint: {fileID: 2025534934}
   projectileSpeed: 10
   rocketSpeed: 7
   fireRate: 3
   rocketFireRate: 1.5
+  laserDamage: 10
+  rocketDamage: 30
 --- !u!114 &2029560563
 MonoBehaviour:
   m_ObjectHideFlags: 0
