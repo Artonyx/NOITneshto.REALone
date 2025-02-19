@@ -7,7 +7,7 @@ public class SpaceshipShooting : MonoBehaviour
     public Transform firePoint;
     public float projectileSpeed = 10f;
     public float rocketSpeed = 7f;
-    public float fireRate = 0.5f;
+    public float fireRate = 0.1f;
     public float rocketFireRate = 1.5f;
     public float laserDamage = 10;
     public float rocketDamage = 30;
