@@ -37,7 +37,7 @@ public class SpaceshipShooting : MonoBehaviour
             _nextFireTime = Time.time + fireRate;
         }
 
-        if (Input.GetKey(KeyCode.Mouse1) && Time.time >= _nextRocketFireTime)
+        if (Input.GetKey(KeyCode.Space) && Time.time >= _nextRocketFireTime)
         {
             ShootRocket();
             _nextRocketFireTime = Time.time + rocketFireRate;
