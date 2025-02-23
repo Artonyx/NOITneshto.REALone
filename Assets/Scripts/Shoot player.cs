@@ -50,6 +50,7 @@ public class SpaceshipShooting : MonoBehaviour
         if (firePoint == null) return;
 
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+        projectile.SetActive(true);
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
@@ -62,6 +63,7 @@ public class SpaceshipShooting : MonoBehaviour
         if (firePoint == null) return;
 
         GameObject rocket = Instantiate(rocketPrefab, firePoint.position, firePoint.rotation);
+        rocket.SetActive(true);
         Rigidbody2D rb = rocket.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
