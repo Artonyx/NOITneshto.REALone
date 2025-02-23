@@ -19,13 +19,12 @@ public class AsteroidSpawner : MonoBehaviour
 
     IEnumerator SpawnAsteroids()
     {
-        while (true)
+        while (_asteroidCount < maxAsteroids)
         {
-            if (_asteroidCount < maxAsteroids)
-            {
-                SpawnAsteroid();
-                _asteroidCount++;
-            }
+            
+            SpawnAsteroid(); 
+            _asteroidCount++;
+            
             yield return new WaitForSeconds(spawnRate);
         }
     }
