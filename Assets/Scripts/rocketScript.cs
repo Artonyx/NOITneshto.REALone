@@ -11,7 +11,7 @@ public class rocketScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.x>SpaceshipShooting.deadZone)
+        if(transform.position.x>SpaceshipShooting.DeadZone)
         {
             Debug.Log("Rocket deleted");
             Destroy(gameObject);
