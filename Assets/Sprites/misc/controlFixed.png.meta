@@ -1,43 +1,43 @@
 fileFormatVersion: 2
-guid: bc9a5d3a5a0951845bb5a5f731d9bea7
+guid: 552ddc4341ff6c741a51f55d06a6f25b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2199925735876447145
-    second: contorl_0
+      213: 5634339223135951975
+    second: controlFixed_0
   - first:
-      213: -4725684002249843013
-    second: contorl_1
+      213: 6247101043785185564
+    second: controlFixed_1
   - first:
-      213: -3223396923018088561
-    second: contorl_2
+      213: -1470847369472013185
+    second: controlFixed_2
   - first:
-      213: 4485150103068741427
-    second: contorl_3
+      213: -3391621669037079641
+    second: controlFixed_3
   - first:
-      213: 7208084695373270831
-    second: contorl_4
+      213: -7846295871693530309
+    second: controlFixed_4
   - first:
-      213: -9069564027766349790
-    second: contorl_5
+      213: 5491542989831858156
+    second: controlFixed_5
   - first:
-      213: -2510318611023272784
-    second: contorl_6
+      213: 1549536104959496956
+    second: controlFixed_6
   - first:
-      213: -1903705341965711551
-    second: contorl_7
+      213: -6830491695217398252
+    second: controlFixed_7
   - first:
-      213: -8574683918506716356
-    second: contorl_8
+      213: -2685556619505274716
+    second: controlFixed_8
   - first:
-      213: -1046030230078392481
-    second: contorl_9
+      213: 6954615773484846390
+    second: controlFixed_9
   - first:
-      213: 3203739127854260098
-    second: contorl_10
+      213: -5885477608582780976
+    second: controlFixed_10
   - first:
-      213: 25125993051944877
-    second: contorl_11
+      213: -1674855025055853554
+    second: controlFixed_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -133,13 +133,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: contorl_0
+      name: controlFixed_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 64
-        width: 53
-        height: 58
+        x: 47
+        y: 93
+        width: 19
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,17 +148,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9abc7231dc4b78e10800000000000000
-      internalID: 2199925735876447145
+      spriteID: 76c9113eba1313e40800000000000000
+      internalID: 5634339223135951975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: contorl_1
+      name: controlFixed_1
       rect:
         serializedVersion: 2
-        x: 80
+        x: 53
+        y: 111
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c19b9cefc4922b650800000000000000
+      internalID: 6247101043785185564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controlFixed_2
+      rect:
+        serializedVersion: 2
+        x: 112
         y: 43
         width: 38
         height: 75
@@ -170,17 +192,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bbed62d007ffa6eb0800000000000000
-      internalID: -4725684002249843013
+      spriteID: f7c8dcf3c10869be0800000000000000
+      internalID: -1470847369472013185
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: contorl_2
+      name: controlFixed_3
       rect:
         serializedVersion: 2
-        x: 81
+        x: 29
+        y: 35
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a30784cf0a8ee0d0800000000000000
+      internalID: -3391621669037079641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controlFixed_4
+      rect:
+        serializedVersion: 2
+        x: 113
         y: 90
         width: 6
         height: 6
@@ -192,62 +236,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f8f6b69a3913443d0800000000000000
-      internalID: -3223396923018088561
+      spriteID: b3bd715e97b5c1390800000000000000
+      internalID: -7846295871693530309
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: contorl_3
+      name: controlFixed_5
       rect:
         serializedVersion: 2
-        x: 27
-        y: 26
-        width: 19
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 33f08b161447e3e30800000000000000
-      internalID: 4485150103068741427
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: contorl_4
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 44
-        width: 7
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f2f47a227d2480460800000000000000
-      internalID: 7208084695373270831
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: contorl_5
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 14
+        x: 5
+        y: 60
         width: 9
         height: 7
       alignment: 0
@@ -258,18 +258,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2206351c19f622280800000000000000
-      internalID: -9069564027766349790
+      spriteID: ce7e6b9f041e53c40800000000000000
+      internalID: 5491542989831858156
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: contorl_6
+      name: controlFixed_6
       rect:
         serializedVersion: 2
-        x: 10
-        y: 9
+        x: 14
+        y: 55
         width: 18
         height: 18
       alignment: 0
@@ -280,18 +280,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0b4e7e4068e892dd0800000000000000
-      internalID: -2510318611023272784
+      spriteID: cf2d0cea0ee018510800000000000000
+      internalID: 1549536104959496956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: contorl_7
+      name: controlFixed_7
       rect:
         serializedVersion: 2
-        x: 27
-        y: 9
+        x: 82
+        y: 55
         width: 19
         height: 18
       alignment: 0
@@ -302,40 +302,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 147ce17e31ea495e0800000000000000
-      internalID: -1903705341965711551
+      spriteID: 41eaf412ef73531a0800000000000000
+      internalID: -6830491695217398252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: contorl_8
+      name: controlFixed_8
       rect:
         serializedVersion: 2
-        x: 45
-        y: 9
-        width: 19
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c331720286a900980800000000000000
-      internalID: -8574683918506716356
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: contorl_9
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 14
+        x: 101
+        y: 60
         width: 9
         height: 7
       alignment: 0
@@ -346,17 +324,61 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f577bdf3c01cb71f0800000000000000
-      internalID: -1046030230078392481
+      spriteID: 4a07036bb7cfabad0800000000000000
+      internalID: -2685556619505274716
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: contorl_10
+      name: controlFixed_9
       rect:
         serializedVersion: 2
-        x: 74
+        x: 47
+        y: 17
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63d84e7e232c38060800000000000000
+      internalID: 6954615773484846390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controlFixed_10
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 8
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d768ee2c45925ea0800000000000000
+      internalID: -5885477608582780976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controlFixed_11
+      rect:
+        serializedVersion: 2
+        x: 106
         y: 9
         width: 52
         height: 18
@@ -368,30 +390,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 28fd5cc33c7f57c20800000000000000
-      internalID: 3203739127854260098
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: contorl_11
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 0
-        width: 7
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: da77d7225f3495000800000000000000
-      internalID: 25125993051944877
+      spriteID: e04944d7a38b1c8e0800000000000000
+      internalID: -1674855025055853554
       vertices: []
       indices: 
       edges: []
@@ -410,18 +410,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      contorl_0: 2199925735876447145
-      contorl_1: -4725684002249843013
-      contorl_10: 3203739127854260098
-      contorl_11: 25125993051944877
-      contorl_2: -3223396923018088561
-      contorl_3: 4485150103068741427
-      contorl_4: 7208084695373270831
-      contorl_5: -9069564027766349790
-      contorl_6: -2510318611023272784
-      contorl_7: -1903705341965711551
-      contorl_8: -8574683918506716356
-      contorl_9: -1046030230078392481
+      controlFixed_0: 5634339223135951975
+      controlFixed_1: 6247101043785185564
+      controlFixed_10: -5885477608582780976
+      controlFixed_11: -1674855025055853554
+      controlFixed_2: -1470847369472013185
+      controlFixed_3: -3391621669037079641
+      controlFixed_4: -7846295871693530309
+      controlFixed_5: 5491542989831858156
+      controlFixed_6: 1549536104959496956
+      controlFixed_7: -6830491695217398252
+      controlFixed_8: -2685556619505274716
+      controlFixed_9: 6954615773484846390
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
