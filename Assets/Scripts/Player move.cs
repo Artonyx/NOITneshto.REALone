@@ -6,10 +6,12 @@ public class SpaceshipController : MonoBehaviour
     public float rotationSpeed = 100f;
 
     private Rigidbody2D rb;
+    private Rigidbody2D _rb;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        _rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -36,6 +38,7 @@ public class SpaceshipController : MonoBehaviour
             rb.AddForce(Vector2.left * thrustPower * Time.deltaTime);
         }
     }
+
 
 
 }
