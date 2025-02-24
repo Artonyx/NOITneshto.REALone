@@ -47,5 +47,6 @@ public class AsteroidSpawner : MonoBehaviour
 
         // Destroy after some time to avoid clutter
         Destroy(asteroid, 10f);
+        _asteroidCount--;
     }
 }

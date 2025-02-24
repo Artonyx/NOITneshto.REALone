@@ -29,8 +29,8 @@ public class AsteroidSpawn : MonoBehaviour
         }
     }
 
-    void SpawnAsteroid()
-    {
+    private void SpawnAsteroid()
+    { 
         
         float randomX = Random.Range(-spawnRangeX, spawnRangeX);
         Vector2 spawnPosition = new Vector2(randomX, spawnHeight);
@@ -47,5 +47,6 @@ public class AsteroidSpawn : MonoBehaviour
 
         // Destroy after some time to avoid clutter
         Destroy(asteroid, 10f);
+        _asteroidCount--;
     }
 }

@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class Asteroid : MonoBehaviour
 {
-    public int health = 200; 
+    public int health = 2; 
     public GameObject explosionEffect; 
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Projectile")) 
+        if(other.CompareTag("Projectile")) 
         {
             health--;
 
