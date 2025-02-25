@@ -18,6 +18,15 @@ public class Asteroid : MonoBehaviour
                 DestroyAsteroid();
             }
         }
+        else if (other.CompareTag("Rocket"))
+        {
+            health -= health;
+            Destroy(other.gameObject);
+            if (health <= 0)
+            {
+                DestroyAsteroid();
+            }
+        }
     }
 
     void DestroyAsteroid()

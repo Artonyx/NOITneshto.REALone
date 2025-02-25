@@ -1,16 +1,18 @@
 using UnityEngine;
-
-public class rocketScript : MonoBehaviour
+[RequireComponent(typeof(Rigidbody2D))]
+public class RocketScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public Transform target;
+    private Rigidbody2D _rb;
     void Start()
     {
-        
+        target = GameObject.FindGameObjectWithTag("Asteroid").transform;
+        _rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        _rb.linearVelocity = transform.forward * 10;
         if(transform.position.x>SpaceshipShooting.DeadZone)
         {
             Debug.Log("Rocket deleted");
