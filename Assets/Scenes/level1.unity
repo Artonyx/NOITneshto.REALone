@@ -1595,7 +1595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &536869595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3876,6 +3876,7 @@ RectTransform:
   m_Children:
   - {fileID: 133353496}
   - {fileID: 38326436}
+  - {fileID: 2015577423}
   - {fileID: 1606884900}
   m_Father: {fileID: 986066159}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5961,7 +5962,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce86c016a05ffc546a086b24401da06d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!1 &2025534933
 GameObject:
   m_ObjectHideFlags: 0
