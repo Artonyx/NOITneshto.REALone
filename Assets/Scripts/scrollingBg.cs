@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class scrollingBg : MonoBehaviour
 {
-    public float speed = 0.1f;
+    public float speed;
 
     [SerializeField] 
     private Renderer bgRenderer;
