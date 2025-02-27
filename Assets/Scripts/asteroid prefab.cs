@@ -2,16 +2,21 @@ using UnityEngine;
 
 public class Asteroid : MonoBehaviour
 {
-    public int health = 2; 
-    public GameObject explosionEffect; 
+    public int health = 4;
+    public GameObject explosionEffect;
+    private AsteroidSpawn _asteroidSpawn; 
+
+    void Start()
+    {
+        _asteroidSpawn = FindObjectOfType<AsteroidSpawn>(); 
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Projectile")) 
+        if (other.CompareTag("Projectile"))
         {
             health--;
-
-            Destroy(other.gameObject); 
+            Destroy(other.gameObject);
 
             if (health <= 0)
             {
@@ -20,12 +25,9 @@ public class Asteroid : MonoBehaviour
         }
         else if (other.CompareTag("Rocket"))
         {
-            health -= health;
+            health = 0;
             Destroy(other.gameObject);
-            if (health <= 0)
-            {
-                DestroyAsteroid();
-            }
+            DestroyAsteroid();
         }
     }
 
@@ -34,6 +36,10 @@ public class Asteroid : MonoBehaviour
         if (explosionEffect != null)
         {
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
+        }
+        if (_asteroidSpawn != null)
+        {
+            _asteroidSpawn.DecreaseCount(); 
         }
 
         Destroy(gameObject);

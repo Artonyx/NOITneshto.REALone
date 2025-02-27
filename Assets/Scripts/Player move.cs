@@ -15,7 +15,7 @@ public class SpaceshipController : MonoBehaviour
         _rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         _rb.freezeRotation = true;
 
-        
+
         Vector2 screenBounds = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
         _screenWidth = screenBounds.x;
         _screenHeight = screenBounds.y;
@@ -36,14 +36,14 @@ public class SpaceshipController : MonoBehaviour
         if (Input.GetKey(KeyCode.D)) moveDirection += Vector2.right;
         if (Input.GetKey(KeyCode.A)) moveDirection += Vector2.left;
 
-        
+        _rb.AddForce(moveDirection.normalized );
+        _rb.AddForce(moveDirection.normalized * thrustPower * Time.deltaTime);
     }
-
-    void KeepWithinBounds()
+void KeepWithinBounds()
     {
         Vector2 position = transform.position;
         Vector2 velocity = _rb.linearVelocity;
-        
+
         if (position.x > _screenWidth)
         {
             transform.position = new Vector2(_screenWidth, position.y);
@@ -54,7 +54,7 @@ public class SpaceshipController : MonoBehaviour
             transform.position = new Vector2(-_screenWidth, position.y);
             _rb.linearVelocity = new Vector2(-velocity.x, velocity.y);
         }
-        
+
         if (position.y > _screenHeight)
         {
             transform.position = new Vector2(position.x, _screenHeight);
