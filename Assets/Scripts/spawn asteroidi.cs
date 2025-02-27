@@ -46,7 +46,7 @@ public class AsteroidSpawn : MonoBehaviour
         }
 
         // Destroy after some time to avoid clutter
-        if(transform.position.x>SpaceshipShooting.DeadZone)
+        if(transform.position.y>SpaceshipShooting.DeadZone)
         {
             Debug.Log("Rocket deleted");
             Destroy(gameObject);
