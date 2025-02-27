@@ -831,7 +831,7 @@ GameObject:
   - component: {fileID: 536869595}
   m_Layer: 0
   m_Name: asteroid (otnovo)
-  m_TagString: Asteroid
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3164,7 +3164,7 @@ GameObject:
   - component: {fileID: 1941697287}
   m_Layer: 0
   m_Name: Rocket
-  m_TagString: Rocket
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3270,7 +3270,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce86c016a05ffc546a086b24401da06d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 536869598}
 --- !u!1 &2025534933
 GameObject:
   m_ObjectHideFlags: 0
