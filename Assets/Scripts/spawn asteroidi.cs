@@ -45,8 +45,11 @@ public class AsteroidSpawn : MonoBehaviour
             rb.linearVelocity = new Vector2(0, -Random.Range(minSpeed, maxSpeed));
         }
 
-        // Destroy after some time to avoid clutter
-        Destroy(asteroid, 10f);
-        _asteroidCount--;
+        
+        if(transform.position.y>SpaceshipShooting.DeadZone)
+        {
+            Debug.Log("Rocket deleted");
+            Destroy(gameObject);
+        }
     }
 }

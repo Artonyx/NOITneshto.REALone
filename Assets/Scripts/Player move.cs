@@ -36,7 +36,7 @@ public class SpaceshipController : MonoBehaviour
         if (Input.GetKey(KeyCode.D)) moveDirection += Vector2.right;
         if (Input.GetKey(KeyCode.A)) moveDirection += Vector2.left;
 
-        _rb.AddForce(moveDirection.normalized * thrustPower * Time.deltaTime);
+        
     }
 
     void KeepWithinBounds()
