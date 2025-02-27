@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Health : MonoBehaviour
 {
     public int maxHealth = 3;
     public int currentHealth;
+    
 
     private void Start()
     {
@@ -25,5 +27,13 @@ public class Health : MonoBehaviour
     {
         Debug.Log(gameObject.name + " has died!");
         Destroy(gameObject); 
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Asteroid"))
+        {
+            TakeDamage(1); 
+        }
     }
 }

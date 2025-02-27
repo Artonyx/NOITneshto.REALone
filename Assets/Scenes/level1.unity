@@ -2638,7 +2638,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 851007326}
-  - {fileID: 2025534934}
   m_Father: {fileID: 2029560560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &789745728
@@ -3262,7 +3261,7 @@ Transform:
   m_GameObject: {fileID: 1182351116}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.69, y: 0.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3568,7 +3567,7 @@ Transform:
   m_GameObject: {fileID: 1230071472}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.12, y: 5.76, z: 0.053727854}
+  m_LocalPosition: {x: -6.43, y: 5.8300004, z: 0.053727854}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4527,7 +4526,7 @@ Transform:
   m_GameObject: {fileID: 1587615309}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0.69, y: 0.07, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5961,7 +5960,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce86c016a05ffc546a086b24401da06d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!1 &2025534933
 GameObject:
   m_ObjectHideFlags: 0
@@ -5991,7 +5989,7 @@ Transform:
   m_LocalScale: {x: 0, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 789745727}
+  m_Father: {fileID: 2029560560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2029560557
 GameObject:
@@ -6099,6 +6097,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2025534934}
   - {fileID: 789745727}
   - {fileID: 1941697284}
   m_Father: {fileID: 0}
@@ -6146,7 +6145,7 @@ MonoBehaviour:
   rocketPrefab: {fileID: 1941697283}
   firePoint: {fileID: 2025534934}
   projectileSpeed: 15
-  rocketSpeed: 10
+  rocketSpeed: 7
   fireRate: 0.12
   rocketFireRate: 1
   laserDamage: 10
@@ -6176,6 +6175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  currentHealth: 0
 --- !u!61 &2029560565
 BoxCollider2D:
   m_ObjectHideFlags: 0

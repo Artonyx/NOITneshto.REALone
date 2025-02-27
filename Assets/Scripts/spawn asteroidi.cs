@@ -46,7 +46,10 @@ public class AsteroidSpawn : MonoBehaviour
         }
 
         // Destroy after some time to avoid clutter
-        Destroy(asteroid, 10f);
-        _asteroidCount--;
+        if(transform.position.x>SpaceshipShooting.DeadZone)
+        {
+            Debug.Log("Rocket deleted");
+            Destroy(gameObject);
+        }
     }
 }
