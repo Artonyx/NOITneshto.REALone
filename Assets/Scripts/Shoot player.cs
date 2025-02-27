@@ -1,17 +1,16 @@
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 public class SpaceshipShooting : MonoBehaviour
 {
     public GameObject projectilePrefab;
     public GameObject rocketPrefab;
     public Transform firePoint;
-    private Transform target;
     public float projectileSpeed = 10f;
+    public float rocketSpeed = 7f;
     public float fireRate = 0.1f;
     public float rocketFireRate = 1.5f;
-    public float speedRaketa = 5f;
-    public float rotateSpeed = 100f;
+    public float laserDamage = 10;
+    public float rocketDamage = 30;
 
     private float _nextFireTime;
     private float _nextRocketFireTime;
@@ -68,14 +67,9 @@ public class SpaceshipShooting : MonoBehaviour
         Rigidbody2D rb = rocket.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            Vector2 direction = (target.position - transform.position);
-            direction.Normalize();
-            float rotateAmount = Vector3.Cross(direction, transform.up).z;
-            rb.angularVelocity = -rotateAmount * rotateSpeed;
-            rb.linearVelocity = transform.up * speedRaketa;
+            rb.linearVelocity = firePoint.up * rocketSpeed;
         }
-        
-        RaketaScript rocketScript = rocket.GetComponent<RaketaScript>();
+        RocketScript rocketScript = rocket.GetComponent<RocketScript>();
         if (rocketScript != null)
         {
             rocketScript.SetTarget(FindClosestAsteroid());
@@ -105,19 +99,40 @@ public class SpaceshipShooting : MonoBehaviour
 [RequireComponent(typeof(Rigidbody2D))]
 public class RaketaScript : MonoBehaviour
 {
-    private Rigidbody2D _rb;
     private Transform target;
+    private Rigidbody2D _rb;
+    public float speed = 5f;
+    public float rotateSpeed = 100f;
 
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
     }
 
-    public void SetTarget(Transform newTarget) // ✅ Fixed: Added this method
+    public void SetTarget(Transform newTarget)
     {
         target = newTarget;
     }
-    
+
+    void FixedUpdate()
+    {
+        if (target == null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        
+        Vector2 direction = (Vector2)(target.position - transform.position);
+        direction.Normalize();
+        float rotateAmount = Vector3.Cross(direction, transform.up).z;
+        _rb.angularVelocity = -rotateAmount * rotateSpeed;
+        _rb.linearVelocity = transform.up * speed;
+        
+        if (transform.position.x > SpaceshipShooting.DeadZone)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
