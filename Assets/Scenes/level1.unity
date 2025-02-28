@@ -855,7 +855,7 @@ MonoBehaviour:
   maxAsteroids: 10
   minSpeed: 2
   maxSpeed: 4
-  _asteroidCount: 0
+  asteroidCount: 0
 --- !u!50 &536869596
 Rigidbody2D:
   serializedVersion: 5
@@ -2409,7 +2409,7 @@ Transform:
   m_GameObject: {fileID: 1587615309}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 2.43, y: -0.03, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
