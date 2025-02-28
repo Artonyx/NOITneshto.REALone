@@ -10,7 +10,7 @@ public class AsteroidSpawn : MonoBehaviour
     public int maxAsteroids = 15;
     public float minSpeed = 2f, maxSpeed = 5f;
 
-    public int _asteroidCount = 0;
+    public int asteroidCount = 0;
 
     void Start()
     {
@@ -22,13 +22,14 @@ public class AsteroidSpawn : MonoBehaviour
     {
         while (true)  // Keep spawning indefinitely
         {
-            if (_asteroidCount < maxAsteroids)
+            if (asteroidCount < maxAsteroids)
             {
-                SpawnAsteroid();  // Spawn a new asteroid
-                _asteroidCount++;  // Increment the asteroid count
+                SpawnAsteroid(); 
+                asteroidCount++;  
             }
 
-            yield return new WaitForSeconds(spawnRate);  // Wait before trying to spawn again
+            yield return new WaitForSeconds(spawnRate);
+            
         }
     }
 
@@ -52,9 +53,10 @@ public class AsteroidSpawn : MonoBehaviour
     // Decrease the asteroid count when an asteroid is destroyed
     public void DecreaseCount()
     {
-        if (_asteroidCount > 0)
+        if (asteroidCount > 0)
         {
-            _asteroidCount--;  // Decrease the count
+            asteroidCount--;
         }
     }
+    
 }

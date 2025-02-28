@@ -8,7 +8,7 @@ public class Asteroid : MonoBehaviour
 
     void Start()
     {
-        _asteroidSpawn = FindObjectOfType<AsteroidSpawn>(); 
+        _asteroidSpawn = Object.FindObjectOfType<AsteroidSpawn>(); 
     }
 
     void OnTriggerEnter2D(Collider2D other)
