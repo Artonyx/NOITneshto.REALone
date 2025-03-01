@@ -22,12 +22,8 @@ public class AsteroidSpawn : MonoBehaviour
     {
         while (true)  
         {
-            if (asteroidCount < maxAsteroids)
-            {
-                SpawnAsteroid(); 
-                asteroidCount++;  
-            }
-
+            SpawnAsteroid(); 
+            asteroidCount++;  
             yield return new WaitForSeconds(spawnRate);
             
         }
