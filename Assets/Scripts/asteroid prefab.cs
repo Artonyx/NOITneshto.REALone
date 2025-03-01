@@ -4,7 +4,7 @@ public class Asteroid : MonoBehaviour
 {
     public int health = 4;
     public GameObject explosionEffect;
-    private AsteroidSpawn _asteroidSpawn; 
+    private AsteroidSpawn _asteroidSpawn;
 
     void Start()
     {
@@ -37,10 +37,8 @@ public class Asteroid : MonoBehaviour
         {
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
         }
-        if (_asteroidSpawn != null)
-        {
-            _asteroidSpawn.DecreaseCount(); 
-        }
+
+        _asteroidSpawn.DecreaseCount(); 
 
         Destroy(gameObject);
     }

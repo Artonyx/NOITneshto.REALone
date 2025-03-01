@@ -20,7 +20,7 @@ public class AsteroidSpawn : MonoBehaviour
 
     IEnumerator SpawnAsteroids()
     {
-        while (true)  // Keep spawning indefinitely
+        while (true)  
         {
             if (asteroidCount < maxAsteroids)
             {
@@ -35,22 +35,22 @@ public class AsteroidSpawn : MonoBehaviour
 
     private void SpawnAsteroid()
     {
-        // Random spawn position within defined range
+        
         float randomX = Random.Range(-spawnRangeX, spawnRangeX);
         Vector2 spawnPosition = new Vector2(randomX, spawnHeight);
 
-        // Instantiate asteroid
+        
         GameObject asteroid = Instantiate(asteroidPrefab, spawnPosition, Quaternion.identity);
 
-        // Apply random speed to the asteroid
+        
         Rigidbody2D rb = asteroid.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            rb.linearVelocity = new Vector2(0, -Random.Range(minSpeed, maxSpeed));  // Set the velocity of the asteroid
+            rb.linearVelocity = new Vector2(0, -Random.Range(minSpeed, maxSpeed));
         }
     }
 
-    // Decrease the asteroid count when an asteroid is destroyed
+    
     public void DecreaseCount()
     {
         if (asteroidCount > 0)
@@ -58,5 +58,6 @@ public class AsteroidSpawn : MonoBehaviour
             asteroidCount--;
         }
     }
+    
     
 }
