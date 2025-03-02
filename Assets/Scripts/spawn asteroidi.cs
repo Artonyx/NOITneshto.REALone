@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AsteroidSpawn : MonoBehaviour
@@ -11,6 +12,8 @@ public class AsteroidSpawn : MonoBehaviour
     public float minSpeed = 2f, maxSpeed = 5f;
 
     public int asteroidCount = 0;
+    
+    public GameObject[] asteroids;
 
     void Start()
     {
@@ -21,7 +24,7 @@ public class AsteroidSpawn : MonoBehaviour
     IEnumerator SpawnAsteroids()
     {
         while (true)  
-        {
+        { 
             SpawnAsteroid(); 
             asteroidCount++;  
             yield return new WaitForSeconds(spawnRate);
@@ -34,9 +37,9 @@ public class AsteroidSpawn : MonoBehaviour
         
         float randomX = Random.Range(-spawnRangeX, spawnRangeX);
         Vector2 spawnPosition = new Vector2(randomX, spawnHeight);
-
         
-        GameObject asteroid = Instantiate(asteroidPrefab, spawnPosition, Quaternion.identity);
+        int randomIndex = Random.Range(0, asteroids.Length);
+        GameObject asteroid = Instantiate(asteroids[randomIndex], spawnPosition, Quaternion.identity);
 
         
         Rigidbody2D rb = asteroid.GetComponent<Rigidbody2D>();
@@ -54,6 +57,9 @@ public class AsteroidSpawn : MonoBehaviour
             asteroidCount--;
         }
     }
-    
-    
+
+    void Update()
+    {
+        
+    }
 }
