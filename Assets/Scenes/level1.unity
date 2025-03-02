@@ -796,7 +796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a62befc8f368c4aa4e462aa8d05e81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 3
   explosionEffect: {fileID: 0}
 --- !u!50 &165876120
 Rigidbody2D:
@@ -1679,7 +1679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a62befc8f368c4aa4e462aa8d05e81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 3
   explosionEffect: {fileID: 0}
 --- !u!50 &435218131
 Rigidbody2D:
@@ -2023,7 +2023,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9299113531d6a74b8554e4dc380a3b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroidPrefab: {fileID: 1497784959}
   spawnRate: 1
   spawnRangeX: 10
   spawnHeight: 6
@@ -3527,7 +3526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a62befc8f368c4aa4e462aa8d05e81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 3
   explosionEffect: {fileID: 0}
 --- !u!50 &900408161
 Rigidbody2D:
@@ -3678,7 +3677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a62befc8f368c4aa4e462aa8d05e81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 3
   explosionEffect: {fileID: 0}
 --- !u!50 &904592245
 Rigidbody2D:
@@ -8278,7 +8277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a62befc8f368c4aa4e462aa8d05e81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 3
   explosionEffect: {fileID: 0}
 --- !u!50 &2030451456
 Rigidbody2D:

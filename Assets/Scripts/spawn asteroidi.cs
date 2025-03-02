@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AsteroidSpawn : MonoBehaviour
 {
-    public GameObject asteroidPrefab;
+    
     public float spawnRate = 1.0f;
     public float spawnRangeX = 10f;
     public float spawnHeight = 6f;
