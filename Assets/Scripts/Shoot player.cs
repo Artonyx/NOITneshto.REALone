@@ -15,7 +15,7 @@ public class SpaceshipShooting : MonoBehaviour
     private float _nextFireTime;
     private float _nextRocketFireTime;
     
-    public static float DeadZone = 10;
+    public static float DeadZone = 20;
     void Start()
     {
         
