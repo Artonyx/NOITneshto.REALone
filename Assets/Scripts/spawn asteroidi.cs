@@ -1,23 +1,16 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class AsteroidSpawn : MonoBehaviour
 {
-    
     public float spawnRate = 1.0f;
-    public float spawnRangeX = 10f;
-    public float spawnHeight = 6f;
-    public int maxAsteroids = 15;
+    public float spawnRangeY = 5f; 
     public float minSpeed = 2f, maxSpeed = 5f;
 
-    public int asteroidCount = 0;
-    
     public GameObject[] asteroids;
 
     void Start()
     {
-        // Start the spawning process
         StartCoroutine(SpawnAsteroids());
     }
 
@@ -26,40 +19,26 @@ public class AsteroidSpawn : MonoBehaviour
         while (true)  
         { 
             SpawnAsteroid(); 
-            asteroidCount++;  
             yield return new WaitForSeconds(spawnRate);
-            
         }
     }
 
     private void SpawnAsteroid()
     {
+        float screenRightX = Camera.main.transform.position.x + Camera.main.orthographicSize * Camera.main.aspect;
         
-        float randomX = Random.Range(-spawnRangeX, spawnRangeX);
-        Vector2 spawnPosition = new Vector2(randomX, spawnHeight);
+        float randomY = Random.Range(-spawnRangeY, spawnRangeY);
+        
+        Vector2 spawnPosition = new Vector2(screenRightX, randomY);
         
         int randomIndex = Random.Range(0, asteroids.Length);
         GameObject asteroid = Instantiate(asteroids[randomIndex], spawnPosition, Quaternion.identity);
 
-        
+
         Rigidbody2D rb = asteroid.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            rb.linearVelocity = new Vector2(0, -Random.Range(minSpeed, maxSpeed));
+            rb.linearVelocity = new Vector2(-Random.Range(minSpeed, maxSpeed), 0);
         }
-    }
-
-    
-    public void DecreaseCount()
-    {
-        if (asteroidCount > 0)
-        {
-            asteroidCount--;
-        }
-    }
-
-    void Update()
-    {
-        
     }
 }
