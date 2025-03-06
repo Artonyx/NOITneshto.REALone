@@ -1,8 +1,8 @@
 using UnityEngine;
 [System.Serializable]
-public class questionsAndAnswers : MonoBehaviour
+public class questionsAndAnswers
 {
-    public string question;
+    public string Question;
     public string[] Answers;
     public int correctAnswer;
 }
