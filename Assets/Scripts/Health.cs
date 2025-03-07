@@ -1,21 +1,15 @@
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 3;
-    private int currentHealth;
-
-    private void Start()
-    {
-        currentHealth = maxHealth;  
-    }
+    public int health = 3;
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-        Debug.Log(gameObject.name + " took " + damage + " damage. Remaining health: " + currentHealth);
+        health -= damage;
+        Debug.Log("Player took damage! Health: " + health);
 
-        if (currentHealth <= 0)
+        if (health <= 0)
         {
             Die();
         }
@@ -23,7 +17,7 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log(gameObject.name + " has died!");
+        Debug.Log("Player Died!");
         Destroy(gameObject); 
     }
 }

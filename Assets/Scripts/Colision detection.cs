@@ -2,17 +2,19 @@ using UnityEngine;
 
 public class Hitbox2D : MonoBehaviour
 {
-    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Collision detected with: " + collision.collider.name);
 
-        Health health = collision.collider.GetComponent<Health>();
-        if (health != null)
+        // Check if the object we collided with is the player
+        PlayerHealth playerHealth = collision.collider.GetComponent<PlayerHealth>();
+        if (playerHealth != null)
         {
-            health.TakeDamage(1);
+            playerHealth.TakeDamage(1);
+            Destroy(gameObject); // Destroy asteroid on impact
         }
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Trigger detected with: " + other.name);
@@ -21,6 +23,7 @@ public class Hitbox2D : MonoBehaviour
         if (health != null)
         {
             health.TakeDamage(1);
+            Destroy(gameObject); // Destroy asteroid when hit by a bullet
         }
     }
 }
