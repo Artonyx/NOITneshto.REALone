@@ -533,6 +533,7 @@ GameObject:
   - component: {fileID: 151715645}
   - component: {fileID: 151715644}
   - component: {fileID: 151715643}
+  - component: {fileID: 151715647}
   m_Layer: 0
   m_Name: asteroid prefab (3)
   m_TagString: Untagged
@@ -586,46 +587,27 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -5.0315704, y: -0.067382336}
-      - {x: -5.042249, y: 0.09144926}
-      - {x: -4.9796705, y: 0.30683875}
-      - {x: -5.0958376, y: 0.42831898}
-      - {x: -5.093693, y: 0.55635095}
-      - {x: -5.0606, y: 0.6680174}
-      - {x: -4.9820433, y: 0.7202511}
-      - {x: -4.761069, y: 0.69390464}
-      - {x: -4.5224214, y: 0.6648207}
-      - {x: -4.3645487, y: 0.65645003}
-      - {x: -4.323449, y: 0.7263713}
-      - {x: -4.1950846, y: 0.7235379}
-      - {x: -4.145481, y: 0.678257}
-      - {x: -4.04725, y: 0.6571853}
-      - {x: -3.9896543, y: 0.48064494}
-      - {x: -3.9451709, y: 0.39714313}
-      - {x: -3.8496318, y: 0.36157513}
-      - {x: -3.7859843, y: 0.3216381}
-      - {x: -3.7561884, y: 0.21333504}
-      - {x: -3.8124824, y: 0.1979456}
-      - {x: -3.8131132, y: -0.096588135}
-      - {x: -3.9095335, y: -0.192832}
-      - {x: -3.8450565, y: -0.27650213}
-      - {x: -3.8459024, y: -0.3840499}
-      - {x: -3.786151, y: -0.41864634}
-      - {x: -3.7429848, y: -0.5554085}
-      - {x: -3.7400265, y: -0.6774268}
-      - {x: -3.819786, y: -0.8092809}
-      - {x: -3.927124, y: -0.84183836}
-      - {x: -3.9514685, y: -0.77035654}
-      - {x: -4.0627584, y: -0.66339445}
-      - {x: -4.207355, y: -0.6006973}
-      - {x: -4.358282, y: -0.4462242}
-      - {x: -4.405425, y: -0.2980156}
-      - {x: -4.490882, y: -0.3703661}
-      - {x: -4.7278376, y: -0.42857885}
-      - {x: -4.759267, y: -0.39537382}
-      - {x: -4.8018026, y: -0.35591507}
-      - {x: -4.845145, y: -0.3102827}
-      - {x: -4.9320064, y: -0.16942078}
+    - - {x: -3.4950418, y: -1.4933124}
+      - {x: -3.7423306, y: -1.4601793}
+      - {x: -4.011491, y: -1.5226111}
+      - {x: -4.4056883, y: -1.4487448}
+      - {x: -4.5613985, y: -1.5270114}
+      - {x: -4.5845413, y: -1.7044423}
+      - {x: -4.49829, y: -1.9091525}
+      - {x: -4.5322447, y: -2.107976}
+      - {x: -4.537447, y: -2.2828708}
+      - {x: -4.388094, y: -2.4312506}
+      - {x: -4.238014, y: -2.6259136}
+      - {x: -4.0857573, y: -2.6224394}
+      - {x: -3.8818374, y: -2.5524726}
+      - {x: -3.721136, y: -2.7944665}
+      - {x: -3.5148153, y: -2.8809638}
+      - {x: -3.3854036, y: -3.0459108}
+      - {x: -3.1845603, y: -2.907335}
+      - {x: -3.2705603, y: -2.5486913}
+      - {x: -3.3282022, y: -2.4002385}
+      - {x: -3.2147236, y: -1.9127316}
+      - {x: -3.3690119, y: -1.7815874}
   m_UseDelaunayMesh: 0
 --- !u!114 &151715644
 MonoBehaviour:
@@ -684,6 +666,52 @@ Transform:
   - {fileID: 681467801}
   m_Father: {fileID: 536869598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &151715647
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151715642}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -3.8494887, y: -2.2487497}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.4320059, y: 1.6094389}
+  m_EdgeRadius: 0
 --- !u!1 &165876117
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,6 +724,7 @@ GameObject:
   - component: {fileID: 165876120}
   - component: {fileID: 165876119}
   - component: {fileID: 165876118}
+  - component: {fileID: 165876122}
   m_Layer: 0
   m_Name: asteroid prefab (7)
   m_TagString: Untagged
@@ -737,7 +766,7 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.5, y: -2.2}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -841,6 +870,52 @@ Transform:
   - {fileID: 724721315}
   m_Father: {fileID: 536869598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &165876122
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165876117}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -3.879199, y: -2.2032695}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.8121815, y: 0.9566574}
+  m_EdgeRadius: 0
 --- !u!1 &215333895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,6 +1656,7 @@ GameObject:
   - component: {fileID: 435218131}
   - component: {fileID: 435218130}
   - component: {fileID: 435218129}
+  - component: {fileID: 435218133}
   m_Layer: 0
   m_Name: asteroid prefab (8)
   m_TagString: Untagged
@@ -1622,7 +1698,7 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.5, y: -2.2}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1723,6 +1799,52 @@ Transform:
   - {fileID: 1098521238}
   m_Father: {fileID: 536869598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &435218133
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435218128}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -3.8647518, y: -2.224941}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.8410759, y: 0.76883745}
+  m_EdgeRadius: 0
 --- !u!1 &439398748
 GameObject:
   m_ObjectHideFlags: 0
@@ -2003,6 +2125,7 @@ GameObject:
   - component: {fileID: 536869598}
   - component: {fileID: 536869596}
   - component: {fileID: 536869595}
+  - component: {fileID: 536869599}
   m_Layer: 0
   m_Name: asteroid (otnovo)
   m_TagString: Untagged
@@ -2088,6 +2211,18 @@ Transform:
   - {fileID: 435218132}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &536869599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536869594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f2294fb66441849892964ffd56c540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &538080213
 GameObject:
   m_ObjectHideFlags: 0
@@ -3427,6 +3562,7 @@ GameObject:
   - component: {fileID: 900408161}
   - component: {fileID: 900408160}
   - component: {fileID: 900408159}
+  - component: {fileID: 900408163}
   m_Layer: 0
   m_Name: asteroid prefab (5)
   m_TagString: Untagged
@@ -3480,34 +3616,22 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -4.522193, y: 0.1400857}
-      - {x: -4.4673753, y: 0.16974354}
-      - {x: -4.437655, y: 0.23947024}
-      - {x: -4.3144927, y: 0.25925994}
-      - {x: -4.210298, y: 0.326694}
-      - {x: -4.0621634, y: 0.34432435}
-      - {x: -4.0069065, y: 0.18096352}
-      - {x: -4.046567, y: 0.117292166}
-      - {x: -4.048211, y: -0.15662122}
-      - {x: -4.087123, y: -0.2645042}
-      - {x: -4.2130065, y: -0.27022457}
-      - {x: -4.2466493, y: -0.2633562}
-      - {x: -4.2620745, y: -0.29125214}
-      - {x: -4.289584, y: -0.3100512}
-      - {x: -4.283446, y: -0.33095694}
-      - {x: -4.288829, y: -0.3476715}
-      - {x: -4.295294, y: -0.3453722}
-      - {x: -4.321705, y: -0.34568202}
-      - {x: -4.319578, y: -0.36608267}
-      - {x: -4.319198, y: -0.3744595}
-      - {x: -4.4588976, y: -0.38223648}
-      - {x: -4.6092796, y: -0.25326204}
-      - {x: -4.7212334, y: -0.2428956}
-      - {x: -4.7930355, y: -0.019481659}
-      - {x: -4.8005, y: 0.102716446}
-      - {x: -4.772792, y: 0.17313004}
-      - {x: -4.7133455, y: 0.24004698}
-      - {x: -4.5699334, y: 0.24688476}
+    - - {x: -4.00473, y: -2.0373569}
+      - {x: -4.0293665, y: -1.9257574}
+      - {x: -4.21978, y: -1.9314747}
+      - {x: -4.2772274, y: -2.0639396}
+      - {x: -4.2779903, y: -2.267696}
+      - {x: -4.191107, y: -2.3910248}
+      - {x: -4.043838, y: -2.4830437}
+      - {x: -3.9392586, y: -2.6026516}
+      - {x: -3.7745562, y: -2.5701342}
+      - {x: -3.687295, y: -2.4730983}
+      - {x: -3.5008502, y: -2.4599001}
+      - {x: -3.4887466, y: -2.2554336}
+      - {x: -3.5163975, y: -2.0771275}
+      - {x: -3.465682, y: -1.9621534}
+      - {x: -3.5233002, y: -1.8355875}
+      - {x: -3.9167318, y: -1.9204459}
   m_UseDelaunayMesh: 0
 --- !u!114 &900408160
 MonoBehaviour:
@@ -3566,6 +3690,52 @@ Transform:
   - {fileID: 215333896}
   m_Father: {fileID: 536869598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &900408163
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900408158}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -3.8803463, y: -2.2178917}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.81485367, y: 0.76085377}
+  m_EdgeRadius: 0
 --- !u!1 &904592242
 GameObject:
   m_ObjectHideFlags: 0
@@ -3578,6 +3748,7 @@ GameObject:
   - component: {fileID: 904592245}
   - component: {fileID: 904592244}
   - component: {fileID: 904592243}
+  - component: {fileID: 904592247}
   m_Layer: 0
   m_Name: asteroid prefab (6)
   m_TagString: Untagged
@@ -3619,7 +3790,7 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.5, y: -2.2}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3717,6 +3888,52 @@ Transform:
   - {fileID: 617996777}
   m_Father: {fileID: 536869598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &904592247
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904592242}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -3.8456316, y: -2.2333207}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.853426, y: 0.77628326}
+  m_EdgeRadius: 0
 --- !u!1 &966506110
 GameObject:
   m_ObjectHideFlags: 0
@@ -5284,6 +5501,7 @@ GameObject:
   - component: {fileID: 1497784962}
   - component: {fileID: 1497784960}
   - component: {fileID: 1497784964}
+  - component: {fileID: 1497784965}
   m_Layer: 0
   m_Name: asteroid prefab
   m_TagString: Untagged
@@ -5407,6 +5625,52 @@ PolygonCollider2D:
       - {x: -1.0767597, y: -2.784819}
       - {x: -0.65259075, y: -2.6005545}
   m_UseDelaunayMesh: 0
+--- !u!61 &1497784965
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497784959}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -1.2409825, y: -2.0470908}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.5303354, y: 1.530334}
+  m_EdgeRadius: 0
 --- !u!1 &1557719330
 GameObject:
   m_ObjectHideFlags: 0
@@ -6512,6 +6776,7 @@ GameObject:
   - component: {fileID: 1854334855}
   - component: {fileID: 1854334854}
   - component: {fileID: 1854334853}
+  - component: {fileID: 1854334857}
   m_Layer: 0
   m_Name: asteroid prefab (4)
   m_TagString: Untagged
@@ -6565,34 +6830,24 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -5.081562, y: -0.42956066}
-      - {x: -5.093632, y: -0.24297047}
-      - {x: -4.992409, y: -0.00796175}
-      - {x: -4.8200564, y: 0.11981034}
-      - {x: -4.676871, y: 0.19089079}
-      - {x: -4.6723614, y: 0.38718486}
-      - {x: -4.5879536, y: 0.5251548}
-      - {x: -4.2017403, y: 0.52164555}
-      - {x: -4.132187, y: 0.39895844}
-      - {x: -3.9645221, y: 0.4586525}
-      - {x: -3.8402648, y: 0.5020144}
-      - {x: -3.7592282, y: 0.4954698}
-      - {x: -3.7273133, y: 0.2468214}
-      - {x: -3.7400494, y: 0.16829872}
-      - {x: -3.914579, y: -0.050388813}
-      - {x: -3.9773169, y: -0.221066}
-      - {x: -4.0568275, y: -0.24647379}
-      - {x: -4.073045, y: -0.35506094}
-      - {x: -4.235798, y: -0.45014}
-      - {x: -4.375402, y: -0.4981253}
-      - {x: -4.591922, y: -0.43421793}
-      - {x: -4.6480503, y: -0.43757105}
-      - {x: -4.677869, y: -0.47572565}
-      - {x: -4.7192507, y: -0.5295596}
-      - {x: -4.846076, y: -0.5203142}
-      - {x: -4.927187, y: -0.5200782}
-      - {x: -4.9733725, y: -0.5244913}
-      - {x: -5.0261426, y: -0.50855166}
+    - - {x: -3.3713799, y: -1.68994}
+      - {x: -3.5564604, y: -1.7935395}
+      - {x: -3.6891298, y: -1.6387691}
+      - {x: -4.104064, y: -1.6691847}
+      - {x: -4.148446, y: -2.028183}
+      - {x: -4.330387, y: -2.07719}
+      - {x: -4.515112, y: -2.2521667}
+      - {x: -4.591561, y: -2.6990461}
+      - {x: -4.1525354, y: -2.712666}
+      - {x: -4.0503798, y: -2.6584544}
+      - {x: -3.9311752, y: -2.72291}
+      - {x: -3.6921682, y: -2.6692958}
+      - {x: -3.6088529, y: -2.675903}
+      - {x: -3.5078201, y: -2.4581223}
+      - {x: -3.4714785, y: -2.3893714}
+      - {x: -3.349022, y: -2.224595}
+      - {x: -3.1759453, y: -1.9552331}
+      - {x: -3.1915789, y: -1.6890137}
   m_UseDelaunayMesh: 0
 --- !u!114 &1854334854
 MonoBehaviour:
@@ -6651,6 +6906,52 @@ Transform:
   - {fileID: 1700237598}
   m_Father: {fileID: 536869598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1854334857
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854334852}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -3.8803473, y: -2.1908908}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.3702908, y: 1.0925722}
+  m_EdgeRadius: 0
 --- !u!1 &1867498144
 GameObject:
   m_ObjectHideFlags: 0
@@ -6935,6 +7236,7 @@ GameObject:
   - component: {fileID: 1904027595}
   - component: {fileID: 1904027594}
   - component: {fileID: 1904027597}
+  - component: {fileID: 1904027598}
   m_Layer: 0
   m_Name: asteroid prefab (2)
   m_TagString: Untagged
@@ -7029,7 +7331,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -7057,6 +7359,52 @@ PolygonCollider2D:
       - {x: -3.4565506, y: -1.9558158}
       - {x: -3.5566187, y: -1.6568046}
   m_UseDelaunayMesh: 0
+--- !u!61 &1904027598
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904027592}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -3.8396215, y: -2.2061915}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.95757484, y: 1.1272802}
+  m_EdgeRadius: 0
 --- !u!1 &1913579064
 GameObject:
   m_ObjectHideFlags: 0
@@ -7722,8 +8070,6 @@ GameObject:
   - component: {fileID: 2029560562}
   - component: {fileID: 2029560565}
   - component: {fileID: 2029560564}
-  - component: {fileID: 2029560563}
-  - component: {fileID: 2029560566}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -7866,18 +8212,6 @@ MonoBehaviour:
   rocketFireRate: 1
   laserDamage: 10
   rocketDamage: 30
---- !u!114 &2029560563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2029560557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84f2294fb66441849892964ffd56c540, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2029560564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7937,18 +8271,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5751908, y: 0.54152596}
   m_EdgeRadius: 0
---- !u!114 &2029560566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2029560557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2240b50f93271bb45afe24501682314f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
