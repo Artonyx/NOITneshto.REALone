@@ -19,7 +19,7 @@ public class Hitbox2D : MonoBehaviour
     {
         Debug.Log("Trigger detected with: " + other.name);
 
-        Health health = other.GetComponent<Health>();
+        PlayerHealth health = other.GetComponent<PlayerHealth>();
         if (health != null)
         {
             health.TakeDamage(1);
