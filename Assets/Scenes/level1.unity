@@ -2159,7 +2159,6 @@ MonoBehaviour:
   - {fileID: 904592242}
   - {fileID: 165876117}
   - {fileID: 435218128}
-  - {fileID: 0}
 --- !u!50 &536869596
 Rigidbody2D:
   serializedVersion: 5
@@ -8224,7 +8223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a23954dd3fa8e34b8eb992a06ebc20c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
+  health: 3
 --- !u!61 &2029560565
 BoxCollider2D:
   m_ObjectHideFlags: 0
