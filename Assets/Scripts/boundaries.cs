@@ -33,7 +33,7 @@ public class Boundaries : MonoBehaviour
         }
 
         Vector3 viewPos = transform.position;
-        Vector2 velocity = rb.linearVelocity; // No more NullReferenceException
+        Vector2 velocity = rb.linearVelocity;
 
         // Bounce off Left and Right walls
         if (viewPos.x <= -screenBounds.x + objectWidth || viewPos.x >= screenBounds.x - objectWidth)
