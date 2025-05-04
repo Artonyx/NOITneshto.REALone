@@ -2,7 +2,7 @@ using System.Collections; using UnityEngine;
 
 public class AsteroidSpawn : MonoBehaviour
 {
-    public float spawnRate = 0.5f;
+    public float spawnRate = 32f;
     public float minSpeed = 2f;
     public float maxSpeed = 5f;
     public float destroyDelay = 10f;
