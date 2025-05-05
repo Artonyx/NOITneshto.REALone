@@ -1,5 +1,7 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class buttons : MonoBehaviour
 {
     public void goBack()
@@ -8,8 +10,7 @@ public class buttons : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    public void goToLevelPicker()
-    {
+    public void goToLevelPicker(){
         SceneManager.LoadSceneAsync(1);
         Time.timeScale = 1f;
     }
