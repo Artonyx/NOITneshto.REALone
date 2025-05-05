@@ -2147,7 +2147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9299113531d6a74b8554e4dc380a3b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 2
+  spawnRate: 1
   minSpeed: 2
   maxSpeed: 4
   destroyDelay: 8
@@ -8099,7 +8099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d35ee148368f6f142b30fe1eb4386b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrustPower: 7.5
+  thrustPower: 5
 --- !u!212 &2029560559
 SpriteRenderer:
   m_ObjectHideFlags: 0
