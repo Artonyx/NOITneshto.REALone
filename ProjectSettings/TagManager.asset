@@ -8,6 +8,7 @@ TagManager:
   - Projectile tag
   - Rocket
   - Asteroid
+  - Spaceship
   layers:
   - Default
   - TransparentFX
