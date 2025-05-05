@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class SpaceshipController : MonoBehaviour
 {
-    public float thrustPower = 100f;
-    public float rotationSpeed = 120f;
+    public float thrustPower = 70;
 
     private Rigidbody2D _rb;
     private float _screenWidth;
@@ -36,8 +35,7 @@ public class SpaceshipController : MonoBehaviour
         if (Input.GetKey(KeyCode.D)) moveDirection += Vector2.right;
         if (Input.GetKey(KeyCode.A)) moveDirection += Vector2.left;
 
-        _rb.AddForce(moveDirection.normalized );
-        _rb.AddForce(moveDirection.normalized * thrustPower * Time.deltaTime);
+        _rb.AddForce(moveDirection.normalized * thrustPower);
     }
 void KeepWithinBounds()
     {

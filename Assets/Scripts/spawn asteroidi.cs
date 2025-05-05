@@ -34,16 +34,10 @@ public class AsteroidSpawn : MonoBehaviour
     void SpawnAsteroid()
     {
         Camera cam = Camera.main;
-        if (cam == null)
-        {
-            Debug.LogError("Camera.main is null during SpawnAsteroid!");
-            return;
-        }
-
         Vector2 bottomLeft = cam.ScreenToWorldPoint(new Vector2(0, 0));
         Vector2 topRight = cam.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
         float spawnX = topRight.x;
-        float groundOffset = bottomLeft.y + 1.5f;
+        float groundOffset = bottomLeft.y + 6f;
         float spawnY = Random.Range(groundOffset, topRight.y);
         Vector2 spawnPosition = new(spawnX, spawnY);
         int randomIndex = Random.Range(0, asteroids.Length);
@@ -61,11 +55,6 @@ public class AsteroidSpawn : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(-Random.Range(minSpeed, maxSpeed), 0);
         }
-        else
-        {
-            Debug.LogWarning($"Asteroid {asteroids[randomIndex].name} at index {randomIndex} has no Rigidbody2D!");
-        }
-
         StartCoroutine(DestroyAfterDelay(asteroid, destroyDelay));
     }
 
