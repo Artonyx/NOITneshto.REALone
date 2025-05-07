@@ -7,7 +7,7 @@ public class sceneLoaderScript : MonoBehaviour
 {
     public Animator transition;
     public float transitionTime = 1f;
-    //public Button playButton;
+    public GameObject button;
     // Update is called once per frame
     void Update()
     {
