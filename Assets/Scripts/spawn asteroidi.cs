@@ -42,13 +42,13 @@ void SpawnAsteroid()
     }
 
     // Convert screen corners to world coordinates
-    Vector2 bottomLeft = cam.ScreenToWorldPoint(new Vector2(0, 0));
+    Vector2 bottomLeft = cam.ScreenToWorldPoint(Vector2.zero);
     Vector2 topRight = cam.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
-    float spawnX = topRight.x+3f;
-    float groundOffset = bottomLeft.y + 7f;
-    float spawnY = Random.Range(groundOffset, topRight.y);
+    float spawnX = topRight.x + 3f;
+    float minSpawnY = bottomLeft.y + 7f;
+    float spawnY = Random.Range(minSpawnY, topRight.y);
     Vector2 spawnPosition = new Vector2(spawnX, spawnY);
-    int randomIndex = Random.Range(0, asteroids.Length);
+    int randomIndex = Random.Range(0, asteroids?.Length ?? 0);
 
     //check for problems in spawning
     if (asteroids[randomIndex] == null)
