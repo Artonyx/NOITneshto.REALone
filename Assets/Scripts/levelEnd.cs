@@ -9,9 +9,8 @@ public class LevelEnd : MonoBehaviour
     public double moveTime = 1f;
     public GameObject triggerThingy;
     public GameObject winScreen;
-
-    // Dictionary to track win states for each planet
-    public Dictionary<string, bool> planetWins = new Dictionary<string, bool>
+    
+    public Dictionary<string, bool> planetWins = new Dictionary<string, bool> //речник за проверка дали конкретно ниво е преминато
     {
         { "Mercury", false },
         { "Venus", false },
@@ -23,8 +22,7 @@ public class LevelEnd : MonoBehaviour
         { "Neptune", false },
         { "Pluto", false }
     };
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
         triggerThingy.transform.position = new Vector2(10000, 10000);
@@ -37,7 +35,7 @@ public class LevelEnd : MonoBehaviour
         triggerThingy.transform.position = new Vector2(-200, -200);
     }*/
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) 
     {
         if (collision.tag == "Player")
         {
@@ -45,8 +43,7 @@ public class LevelEnd : MonoBehaviour
             Time.timeScale = 0f;
 
             int sceneIndex = SceneManager.GetActiveScene().buildIndex;
-
-            // Map the scene index to the corresponding planet name
+            
             string planetName = GetPlanetNameFromSceneIndex(sceneIndex);
             
             if (planetName != null)

@@ -7,13 +7,13 @@ public class answersScript : MonoBehaviour
 
     public void Answer()
     {
-        if (isCorrect)
+        if (isCorrect) //проверява дали отговорът е правилен и отива на следващия въпрос ако да
         {
             Debug.Log("Correct");
             quizManager.correct();
             
         }
-        else
+        else //ако не - затваря тривиата
         {
             Debug.Log("Incorrect");
             quizManager.window.SetActive(false);
