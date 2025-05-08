@@ -1,14 +1,13 @@
 using UnityEngine;
 
-public class SpaceshipShooting : MonoBehaviour { public GameObject projectilePrefab;
+public class SpaceshipShooting : MonoBehaviour { 
+    public GameObject projectilePrefab;
     public GameObject rocketPrefab;
     public Transform firePoint; 
     public float projectileSpeed = 10f; 
     public float rocketSpeed = 7f;
     public float fireRate = 0.1f;
     public float rocketFireRate = 1.5f; 
-    public float laserDamage = 10;
-    public float rocketDamage = 30;
 
     private float _nextFireTime;
     private float _nextRocketFireTime;
@@ -17,6 +16,7 @@ public class SpaceshipShooting : MonoBehaviour { public GameObject projectilePre
 
     void Start()
     {
+        //check for fire point
         if (firePoint == null)
         {
             firePoint = transform.Find("FirePoint");
@@ -29,11 +29,6 @@ public class SpaceshipShooting : MonoBehaviour { public GameObject projectilePre
 
     void Update()
     {
-        if (GameManager.Instance != null && GameManager.Instance.IsGameOver)
-        {
-            return;
-        }
-        if (firePoint == null) return;
         if (Input.GetKey(KeyCode.Mouse0) && Time.time >= _nextFireTime)
         {
             ShootProjectile();
@@ -64,7 +59,6 @@ public class SpaceshipShooting : MonoBehaviour { public GameObject projectilePre
     void ShootRocket()
     {
         if (firePoint == null) return;
-
         GameObject rocket = Instantiate(rocketPrefab, firePoint.position, firePoint.rotation);
         rocket.tag = "Rocket";
         rocket.SetActive(true);

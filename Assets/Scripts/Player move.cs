@@ -45,7 +45,7 @@ void KeepWithinBounds()
     {
         Vector2 position = transform.position;
         Vector2 velocity = _rb.linearVelocity;
-
+        //check if spaceship is touching the walls
         if (position.x > _screenWidth)
         {
             transform.position = new Vector2(_screenWidth, position.y);

@@ -4,6 +4,7 @@ public class AsteroidSpawn : MonoBehaviour { public float spawnRate = 0.5f; publ
 
 void Start()
 {
+    //check for camera and array of asteroids
     if (Camera.main == null)
     {
         Debug.LogError("No Main Camera found in the scene!");
@@ -19,6 +20,7 @@ void Start()
 
 IEnumerator SpawnAsteroids()
 {
+    //while loop for spawning asteroids
     while (true)
     {
         if (GameManager.Instance != null && GameManager.Instance.IsGameOver)
@@ -39,14 +41,16 @@ void SpawnAsteroid()
         return;
     }
 
+    // Convert screen corners to world coordinates
     Vector2 bottomLeft = cam.ScreenToWorldPoint(new Vector2(0, 0));
     Vector2 topRight = cam.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
-    float spawnX = topRight.x;
-    float groundOffset = bottomLeft.y + 1.5f;
+    float spawnX = topRight.x+3f;
+    float groundOffset = bottomLeft.y + 7f;
     float spawnY = Random.Range(groundOffset, topRight.y);
-    Vector2 spawnPosition = new(spawnX, spawnY);
+    Vector2 spawnPosition = new Vector2(spawnX, spawnY);
     int randomIndex = Random.Range(0, asteroids.Length);
 
+    //check for problems in spawning
     if (asteroids[randomIndex] == null)
     {
         Debug.LogWarning($"Asteroid at index {randomIndex} is null! Skipping spawn.");
@@ -55,7 +59,7 @@ void SpawnAsteroid()
 
     GameObject asteroid = Instantiate(asteroids[randomIndex], spawnPosition, Quaternion.identity);
     Rigidbody2D rb = asteroid.GetComponent<Rigidbody2D>();
-
+    //check for RigidBody
     if (rb != null)
     {
         rb.linearVelocity = new Vector2(-Random.Range(minSpeed, maxSpeed), 0);
@@ -70,6 +74,7 @@ void SpawnAsteroid()
 
 IEnumerator DestroyAfterDelay(GameObject asteroid, float delay)
 {
+    //destroy after delay
     yield return new WaitForSeconds(delay);
 
     if (asteroid != null)
