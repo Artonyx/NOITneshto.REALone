@@ -28,18 +28,18 @@ public class LevelEnd : MonoBehaviour
     void Start()
     {
         triggerThingy.transform.position = new Vector2(10000, 10000);
-        StartCoroutine(MoveTriggerAfterDelay());
+        //StartCoroutine(MoveTriggerAfterDelay());
     }
-
-    IEnumerator MoveTriggerAfterDelay()
+    
+    /*IEnumerator MoveTriggerAfterDelay()
     {
         yield return new WaitForSeconds((float)moveTime);
         triggerThingy.transform.position = new Vector2(-200, -200);
-    }
+    }*/
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.tag == "Player")
         {
             winScreen.SetActive(true);
             Time.timeScale = 0f;
@@ -59,7 +59,14 @@ public class LevelEnd : MonoBehaviour
             }
         }
     }
-
+    void Update()
+    {
+        if (Time.time >= moveTime)
+        {
+            //triggerThingy.SetActive(true);
+            triggerThingy.transform.position = new Vector2(0,0);
+        }
+    }
     private string GetPlanetNameFromSceneIndex(int sceneIndex)
     {
         switch (sceneIndex)
