@@ -1057,16 +1057,6 @@ MonoBehaviour:
   moveTime: 1
   triggerThingy: {fileID: 206412516}
   winScreen: {fileID: 1913579064}
-  winsForPlanets: 
-  winMercury: 0
-  winVenus: 0
-  winEarth: 0
-  winMars: 0
-  winJupiter: 0
-  winSaturn: 0
-  winUranus: 0
-  winNeptune: 0
-  winPluto: 0
 --- !u!114 &206412520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4844,7 +4834,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -655.52905, y: 177.19}
+  m_AnchoredPosition: {x: -655.52905, y: 177.18}
   m_SizeDelta: {x: 280.9418, y: 354.37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1482661674
