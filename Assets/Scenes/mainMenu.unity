@@ -4450,6 +4450,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5148301926661699014, guid: f314813694fcb414599d42eff07ddde2, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 1115624984}
+    - target: {fileID: 5148301926661699014, guid: f314813694fcb414599d42eff07ddde2, type: 3}
+      propertyPath: playButton
+      value: 
+      objectReference: {fileID: 1115624984}
+    - target: {fileID: 5148301926661699014, guid: f314813694fcb414599d42eff07ddde2, type: 3}
       propertyPath: transition
       value: 
       objectReference: {fileID: 112992288}

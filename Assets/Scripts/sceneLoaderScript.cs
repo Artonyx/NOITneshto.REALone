@@ -2,19 +2,26 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class sceneLoaderScript : MonoBehaviour
 {
     public Animator transition;
     public float transitionTime = 1f;
-    public GameObject button;
+    public GameObject playButton;
+
+    void Start()
+    {
+        Button button = playButton.gameObject.GetComponent<Button>();
+        button.onClick.AddListener(delegate { LoadScene(); });
+    }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        /*if (Input.GetKeyDown(KeyCode.Space))
         {
             LoadScene();
-        }
+        }*/
     }
 
     public void LoadScene()

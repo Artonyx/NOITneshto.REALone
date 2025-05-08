@@ -2,102 +2,78 @@ using System;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
-public class levelEnd : MonoBehaviour
+public class LevelEnd : MonoBehaviour
 {
     public double moveTime = 1f;
     public GameObject triggerThingy;
     public GameObject winScreen;
-    public List<bool> winsForPlanets = new List<bool>();
-    public bool winMercury = false;
-    public bool winVenus = false;
-    public bool winEarth = false;
-    public bool winMars = false;
-    public bool winJupiter = false;
-    public bool winSaturn = false;
-    public bool winUranus = false;
-    public bool winNeptune = false;
-    public bool winPluto = false;
-    
-    
+
+    // Dictionary to track win states for each planet
+    public Dictionary<string, bool> planetWins = new Dictionary<string, bool>
+    {
+        { "Mercury", false },
+        { "Venus", false },
+        { "Earth", false },
+        { "Mars", false },
+        { "Jupiter", false },
+        { "Saturn", false },
+        { "Uranus", false },
+        { "Neptune", false },
+        { "Pluto", false }
+    };
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         triggerThingy.transform.position = new Vector2(10000, 10000);
+        StartCoroutine(MoveTriggerAfterDelay());
+    }
+
+    IEnumerator MoveTriggerAfterDelay()
+    {
+        yield return new WaitForSeconds((float)moveTime);
+        triggerThingy.transform.position = new Vector2(-200, -200);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             winScreen.SetActive(true);
             Time.timeScale = 0f;
-            switch (SceneManager.GetActiveScene().buildIndex)
+
+            int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+            // Map the scene index to the corresponding planet name
+            string planetName = GetPlanetNameFromSceneIndex(sceneIndex);
+            
+            if (planetName != null)
             {
-                case 2:
-                {
-                    winMercury = true;
-                }
-                    break;
-                case 3:
-                {
-                    winVenus = true;
-                }
-                    break;
-                case 4:
-                {
-                    winEarth = true;
-                }
-                    break;
-                case 5:
-                {
-                    winMars = true;
-                }
-                    break;
-                case 6:
-                {
-                    winJupiter = true;
-                }
-                    break;
-                case 7:
-                {
-                    winSaturn = true;
-                }
-                    break;
-                case 8:
-                {
-                    winUranus = true;
-                }
-                    break;
-                case 9:
-                {
-                    winNeptune = true;
-                }
-                    break;
-                case 10:
-                {
-                    winPluto = true;
-                }
-                    break;
-                default:
-                {
-                    Debug.LogError("Bro wtf did you do how is this even possible what the hell");
-                }
-                    break;
+                planetWins[planetName] = true;
+            }
+            else
+            {
+                Debug.LogError("Unexpected scene index: " + sceneIndex);
             }
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private string GetPlanetNameFromSceneIndex(int sceneIndex)
     {
-        if (Time.time >= moveTime)
+        switch (sceneIndex)
         {
-            //triggerThingy.SetActive(true);
-            triggerThingy.transform.position = new Vector2(-200, -200);
+            case 2: return "Mercury";
+            case 3: return "Venus";
+            case 4: return "Earth";
+            case 5: return "Mars";
+            case 6: return "Jupiter";
+            case 7: return "Saturn";
+            case 8: return "Uranus";
+            case 9: return "Neptune";
+            case 10: return "Pluto";
+            default: return null;
         }
     }
 }
