@@ -1,9 +1,13 @@
-using UnityEngine; using UnityEngine.UI;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CurrencyManager : MonoBehaviour { public static CurrencyManager Instance { get; private set; } public int currency = 0; [SerializeField] private Text currencyText;
 
     void Awake()
     {
+        Debug.Log("CurrencyManager initialized.");
+
         if (Instance == null)
         {
             Instance = this;
@@ -13,12 +17,33 @@ public class CurrencyManager : MonoBehaviour { public static CurrencyManager Ins
         {
             Destroy(gameObject);
         }
-        UpdateCurrencyDisplay();
     }
 
-    void Start()
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         UpdateCurrencyDisplay();
+        if (scene.name == "level1" || scene.name == "levelPicker")
+        {
+            Text newText = GameObject.Find("CurrencyText")?.GetComponent<Text>();
+            if (newText != null)
+            {
+                SetCurrencyText(newText);
+            }
+            else
+            {
+                Debug.LogWarning("CurrencyText not found in scene: " + scene.name);
+            }
+        }
     }
 
     public void AddCurrency(int amount)
