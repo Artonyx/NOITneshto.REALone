@@ -1,24 +1,22 @@
 using UnityEngine;
 
-public class SpaceshipShooting : MonoBehaviour
-{
-    public GameObject projectilePrefab; 
-    public GameObject rocketPrefab; 
-    public Transform firePoint;
-    public float projectileSpeed = 10f;
+public class SpaceshipShooting : MonoBehaviour { public GameObject projectilePrefab;
+    public GameObject rocketPrefab;
+    public Transform firePoint; 
+    public float projectileSpeed = 10f; 
     public float rocketSpeed = 7f;
     public float fireRate = 0.1f;
-    public float rocketFireRate = 1.5f;
+    public float rocketFireRate = 1.5f; 
     public float laserDamage = 10;
     public float rocketDamage = 30;
 
     private float _nextFireTime;
     private float _nextRocketFireTime;
-    
+
     public static float DeadZone = 20;
+
     void Start()
     {
-        
         if (firePoint == null)
         {
             firePoint = transform.Find("FirePoint");
@@ -31,7 +29,11 @@ public class SpaceshipShooting : MonoBehaviour
 
     void Update()
     {
-        if (firePoint == null) return; 
+        if (GameManager.Instance != null && GameManager.Instance.IsGameOver)
+        {
+            return;
+        }
+        if (firePoint == null) return;
         if (Input.GetKey(KeyCode.Mouse0) && Time.time >= _nextFireTime)
         {
             ShootProjectile();
@@ -50,7 +52,7 @@ public class SpaceshipShooting : MonoBehaviour
         if (firePoint == null) return;
 
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
-        projectile.tag = "Projectile"; 
+        projectile.tag = "Projectile";
         projectile.SetActive(true);
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         if (rb != null)
@@ -64,12 +66,12 @@ public class SpaceshipShooting : MonoBehaviour
         if (firePoint == null) return;
 
         GameObject rocket = Instantiate(rocketPrefab, firePoint.position, firePoint.rotation);
-        rocket.tag = "Rocket"; 
+        rocket.tag = "Rocket";
         rocket.SetActive(true);
         Rigidbody2D rb = rocket.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            rb.linearVelocity = firePoint.up * rocketSpeed; 
+            rb.linearVelocity = firePoint.up * rocketSpeed;
         }
     }
 

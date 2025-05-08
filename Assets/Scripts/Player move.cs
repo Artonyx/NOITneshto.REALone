@@ -22,6 +22,10 @@ public class SpaceshipController : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.Instance != null && GameManager.Instance.IsGameOver)
+        {
+            return;
+        }
         HandleMovement();
         KeepWithinBounds();
     }
