@@ -3,7 +3,7 @@ using UnityEngine;
 public class Asteroid : MonoBehaviour
 {
 
-    public int healthOfAsteroid = 4;
+    public int healthOfAsteroid;
     public GameObject explosionEffect;
     private AsteroidSpawn _asteroidSpawn;
 

@@ -626,7 +626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a62befc8f368c4aa4e462aa8d05e81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
+  healthOfAsteroid: 8
   explosionEffect: {fileID: 0}
 --- !u!50 &151715645
 Rigidbody2D:
@@ -905,7 +905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a62befc8f368c4aa4e462aa8d05e81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  healthOfAsteroid: 4
   explosionEffect: {fileID: 0}
 --- !u!50 &165876120
 Rigidbody2D:
@@ -1740,7 +1740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a62befc8f368c4aa4e462aa8d05e81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  healthOfAsteroid: 4
   explosionEffect: {fileID: 0}
 --- !u!50 &435218131
 Rigidbody2D:
@@ -3621,7 +3621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a62befc8f368c4aa4e462aa8d05e81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  healthOfAsteroid: 4
   explosionEffect: {fileID: 0}
 --- !u!50 &900408161
 Rigidbody2D:
@@ -3819,7 +3819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a62befc8f368c4aa4e462aa8d05e81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  healthOfAsteroid: 4
   explosionEffect: {fileID: 0}
 --- !u!50 &904592245
 Rigidbody2D:
@@ -5042,7 +5042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a62befc8f368c4aa4e462aa8d05e81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
+  healthOfAsteroid: 10
   explosionEffect: {fileID: 0}
 --- !u!50 &1497784962
 Rigidbody2D:
@@ -6690,7 +6690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a62befc8f368c4aa4e462aa8d05e81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
+  healthOfAsteroid: 6
   explosionEffect: {fileID: 0}
 --- !u!50 &1854334855
 Rigidbody2D:
@@ -7028,7 +7028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a62befc8f368c4aa4e462aa8d05e81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
+  healthOfAsteroid: 8
   explosionEffect: {fileID: 0}
 --- !u!50 &1904027595
 Rigidbody2D:
@@ -7365,7 +7365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a62befc8f368c4aa4e462aa8d05e81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
+  healthOfAsteroid: 10
   explosionEffect: {fileID: 0}
 --- !u!50 &1985365660
 Rigidbody2D:
@@ -7717,8 +7717,6 @@ MonoBehaviour:
   rocketSpeed: 10
   fireRate: 0.12
   rocketFireRate: 1
-  laserDamage: 10
-  rocketDamage: 30
 --- !u!114 &2029560564
 MonoBehaviour:
   m_ObjectHideFlags: 0

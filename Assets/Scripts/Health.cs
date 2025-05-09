@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour { 
+public class PlayerHealth : MonoBehaviour
+{
     public int health = 3;
 
     public void TakeDamage(int damage)
@@ -19,5 +20,4 @@ public class PlayerHealth : MonoBehaviour {
         Debug.Log("Player Died!");
         Destroy(gameObject);
     }
-
 }
