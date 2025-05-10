@@ -1,30 +1,31 @@
-using UnityEditor.AddressableAssets.Build.Layout;
 using UnityEngine;
 
 public class Asteroid : MonoBehaviour
 {
     public int healthOfAsteroid = 3;
     public GameObject explosionEffect;
-    audioManager audioManager;
+    private audioManager audioManager;
+    private bool isDestroyed = false;
 
     private void Awake()
     {
-        audioManager = GameObject.Find("AudioManager").GetComponent<audioManager>();
+        GameObject audioManagerObject = GameObject.Find("AudioManager");
+        if (audioManagerObject != null)
+            audioManager = audioManagerObject.GetComponent<audioManager>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (isDestroyed) return;
+
         if (other.CompareTag("Projectile"))
         {
             healthOfAsteroid--;
             Destroy(other.gameObject);
             Debug.Log("Projectile hit asteroid");
 
-
             if (audioManager != null)
-            {
                 audioManager.PlaySFX(audioManager.onHit);
-            }
 
             if (healthOfAsteroid <= 0)
                 DestroyAsteroid();
@@ -39,13 +40,15 @@ public class Asteroid : MonoBehaviour
 
     private void DestroyAsteroid()
     {
+        if (isDestroyed) return;
+        isDestroyed = true;
+
         if (explosionEffect != null)
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
 
         if (audioManager != null)
             audioManager.PlaySFX(audioManager.asteroidDeath);
 
-            Destroy(gameObject);
-        
+        Destroy(gameObject);
     }
 }
