@@ -2,14 +2,17 @@ using UnityEngine;
 
 public class Asteroid : MonoBehaviour
 {
-
-    public int healthOfAsteroid;
+    public int healthOfAsteroid = 3;
     public GameObject explosionEffect;
-    private AsteroidSpawn _asteroidSpawn;
+
+    [SerializeField] private AudioClip explosionSound;
+    [SerializeField] private AudioClip impactSound;
+
+    private AudioSource audioSource;
 
     void Start()
     {
-        _asteroidSpawn = FindObjectOfType<AsteroidSpawn>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -19,6 +22,10 @@ public class Asteroid : MonoBehaviour
             healthOfAsteroid--;
             Destroy(other.gameObject);
             Debug.Log("Projectile hit asteroid");
+
+            
+            if (impactSound != null && audioSource != null)
+                audioSource.PlayOneShot(impactSound);
 
             if (healthOfAsteroid <= 0)
                 DestroyAsteroid();
@@ -31,10 +38,14 @@ public class Asteroid : MonoBehaviour
         }
     }
 
-    void DestroyAsteroid()
+    private void DestroyAsteroid()
     {
         if (explosionEffect != null)
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
+
+        if (explosionSound != null && audioSource != null)
+            audioSource.PlayOneShot(explosionSound);
+
         Destroy(gameObject);
     }
 }
