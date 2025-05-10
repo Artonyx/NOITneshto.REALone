@@ -1,32 +1,20 @@
 using System.Collections; using UnityEngine;
 
-public class AsteroidSpawn : MonoBehaviour { public float spawnRate = 0.5f; public float minSpeed = 2f; public float maxSpeed = 5f; public float destroyDelay = 10f; public GameObject[] asteroids;
+public class AsteroidSpawn : MonoBehaviour { public float spawnRate = 0.5f;
+    public float minSpeed = 2f;
+    public float maxSpeed = 5f;
+    public float destroyDelay = 10f;
+    public GameObject[] asteroids;
 
 void Start()
 {
-    //check for camera and array of asteroids
-    if (Camera.main == null)
-    {
-        Debug.LogError("No Main Camera found in the scene!");
-        return;
-    }
-    if (asteroids == null || asteroids.Length == 0)
-    {
-        Debug.LogError("Asteroids array is empty or not assigned!");
-        return;
-    }
     StartCoroutine(SpawnAsteroids());
 }
 
 IEnumerator SpawnAsteroids()
 {
-    //while loop for spawning asteroids
     while (true)
     {
-        if (GameManager.Instance != null && GameManager.Instance.IsGameOver)
-        {
-            yield break; 
-        }
         SpawnAsteroid();
         yield return new WaitForSeconds(spawnRate);
     }

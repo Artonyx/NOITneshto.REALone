@@ -12,6 +12,9 @@ public class CollisionDetection : MonoBehaviour
             playerHealth.TakeDamage(1);
         }
 
-        Destroy(gameObject);
+        if (collision.collider.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
     }
 }

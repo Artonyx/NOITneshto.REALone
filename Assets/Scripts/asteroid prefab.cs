@@ -1,3 +1,4 @@
+using UnityEditor.AddressableAssets.Build.Layout;
 using UnityEngine;
 
 public class Asteroid : MonoBehaviour
@@ -44,6 +45,7 @@ public class Asteroid : MonoBehaviour
         if (audioManager != null)
             audioManager.PlaySFX(audioManager.asteroidDeath);
 
-        Destroy(gameObject);
+            Destroy(gameObject);
+        
     }
 }
