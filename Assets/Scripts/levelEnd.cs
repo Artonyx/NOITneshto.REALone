@@ -25,7 +25,7 @@ public class LevelEnd : MonoBehaviour
     
     void Start()
     {
-        triggerThingy.transform.position = new Vector2(10000, 10000);
+        //triggerThingy.transform.position = new Vector2(10000, 10000);
         //StartCoroutine(MoveTriggerAfterDelay());
     }
     
@@ -39,11 +39,11 @@ public class LevelEnd : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            Debug.Log("Trigger entered by: " + collision.name);
             winScreen.SetActive(true);
             Time.timeScale = 0f;
 
             int sceneIndex = SceneManager.GetActiveScene().buildIndex;
-            
             string planetName = GetPlanetNameFromSceneIndex(sceneIndex);
             
             if (planetName != null)
