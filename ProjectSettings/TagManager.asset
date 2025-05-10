@@ -9,6 +9,7 @@ TagManager:
   - Rocket
   - Asteroid
   - Spaceship
+  - Audio
   layers:
   - Default
   - TransparentFX

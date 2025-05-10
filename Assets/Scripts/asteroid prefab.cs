@@ -4,15 +4,11 @@ public class Asteroid : MonoBehaviour
 {
     public int healthOfAsteroid = 3;
     public GameObject explosionEffect;
+    audioManager audioManager;
 
-    [SerializeField] private AudioClip explosionSound;
-    [SerializeField] private AudioClip impactSound;
-
-    private AudioSource audioSource;
-
-    void Start()
+    private void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
+        audioManager = GameObject.Find("AudioManager").GetComponent<audioManager>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -23,9 +19,11 @@ public class Asteroid : MonoBehaviour
             Destroy(other.gameObject);
             Debug.Log("Projectile hit asteroid");
 
-            
-            if (impactSound != null && audioSource != null)
-                audioSource.PlayOneShot(impactSound);
+
+            if (audioManager != null)
+            {
+                audioManager.PlaySFX(audioManager.onHit);
+            }
 
             if (healthOfAsteroid <= 0)
                 DestroyAsteroid();
@@ -43,8 +41,8 @@ public class Asteroid : MonoBehaviour
         if (explosionEffect != null)
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
 
-        if (explosionSound != null && audioSource != null)
-            audioSource.PlayOneShot(explosionSound);
+        if (audioManager != null)
+            audioManager.PlaySFX(audioManager.asteroidDeath);
 
         Destroy(gameObject);
     }
