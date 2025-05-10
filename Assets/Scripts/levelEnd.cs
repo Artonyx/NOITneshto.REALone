@@ -61,7 +61,7 @@ public class LevelEnd : MonoBehaviour
         if (Time.time >= moveTime)
         {
             //triggerThingy.SetActive(true);
-            triggerThingy.transform.position = new Vector2(0,0);
+            triggerThingy.transform.position = new Vector2(1200,0);
         }
     }
     private string GetPlanetNameFromSceneIndex(int sceneIndex)
